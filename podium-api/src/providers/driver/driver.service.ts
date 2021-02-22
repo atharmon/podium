@@ -8,7 +8,7 @@ import { BaseProvider } from "../base/base.service";
 
 @Injectable()
 export class DriverService extends BaseProvider<Driver> {
-  constructor(@InjectRepository(Response) private repo: Repository<Driver>) {
+  constructor(@InjectRepository(Driver) private repo: Repository<Driver>) {
     super(repo);
   }
 }

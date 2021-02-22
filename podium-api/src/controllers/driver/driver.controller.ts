@@ -1,7 +1,7 @@
 import { Controller } from "@nestjs/common";
 
-import { Driver } from "src/entities/all.entity";
-import { DriverService } from "src/providers/driver/driver.service";
+import { Driver } from "../../entities/all.entity";
+import { DriverService } from "../../providers/driver/driver.service";
 import { BaseController } from "../base/base.controller";
 
 @Controller("driver")
