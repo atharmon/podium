@@ -27,6 +27,33 @@ export class PodiumBaseEntity extends BaseEntity {
 }
 
 @Entity()
+export class Track extends PodiumBaseEntity {
+  @Column()
+  public name: string;
+
+  @Column()
+  public abbreviation: string;
+
+  @Column()
+  public location: string;
+}
+
+@Entity()
+export class Series extends PodiumBaseEntity {
+  @Column()
+  public name: string;
+}
+
+@Entity()
+export class Team extends PodiumBaseEntity {
+  @Column()
+  public name: string;
+
+  @Column()
+  public drivers: Driver[];
+}
+
+@Entity()
 export class Driver extends PodiumBaseEntity {
   @Column()
   public name: string;
@@ -69,31 +96,4 @@ export class RaceResult extends PodiumBaseEntity {
 
   @Column()
   public finished: number;
-}
-
-@Entity()
-export class Series extends PodiumBaseEntity {
-  @Column()
-  public name: string;
-}
-
-@Entity()
-export class Team extends PodiumBaseEntity {
-  @Column()
-  public name: string;
-
-  @Column()
-  public drivers: Driver[];
-}
-
-@Entity()
-export class Track extends PodiumBaseEntity {
-  @Column()
-  public name: string;
-
-  @Column()
-  public abbreviation: string;
-
-  @Column()
-  public location: string;
 }

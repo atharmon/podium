@@ -1,11 +1,9 @@
 import { Body, Delete, Get, Param, Post, Put } from "@nestjs/common";
-import { Controller } from "@nestjs/common";
 
 import { BaseEntity, DeepPartial } from "typeorm";
 
 import { BaseProvider } from "../../providers/base/base.service";
 
-@Controller("base")
 export abstract class BaseController<T extends BaseEntity> {
   constructor(private readonly baseProvider: BaseProvider<T>) {}
 

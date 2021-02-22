@@ -5,8 +5,8 @@ import { BaseProvider } from "../../providers/base/base.service";
 
 @Module({
   imports: [],
-  exports: [BaseController, BaseProvider],
-  controllers: [BaseController],
-  providers: [BaseProvider],
+  exports: [],
+  controllers: [],
+  providers: [],
 })
 export class BaseModule {}
